@@ -1,0 +1,331 @@
+:root {
+  --color-bg-gradient: linear-gradient(to top, #b7eaff 0%, #e0ffd6 100%);
+  --color-hill1: radial-gradient(ellipse at 60% 80%, #7ec850 70%, #5fa147 100%);
+  --color-hill2: radial-gradient(ellipse at 40% 80%, #b5e48c 70%, #76c893 100%);
+  --color-trunk: linear-gradient(to bottom, #a67c52 60%, #7c5a36 100%);
+  --color-foliage-main: radial-gradient(circle at 60% 40%, #7ec850 80%, #5fa147 100%);
+  --color-foliage-mid: radial-gradient(circle at 60% 40%, #b5e48c 80%, #76c893 100%);
+  --color-foliage-top: radial-gradient(circle at 60% 40%, #52b788 80%, #99d98c 100%);
+}
+
+.landing-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-gradient);
+  overflow: hidden;
+}
+
+.landing-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Birds */
+.birds-group {
+  position: absolute;
+  top: 12%;
+  right: -15%;
+  width: 240px;
+  height: 60px;
+  z-index: 3;
+  animation: birdsFly 32s linear infinite;
+}
+.birds-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bird {
+  transform-origin: center;
+}
+.bird-top {
+  transform-origin: 120px 28px;
+  animation: wingFlap 1.2s infinite;
+}
+.bird-mid-left {
+  transform-origin: 95px 45px;
+  animation: wingFlap 1.3s 0.2s infinite;
+}
+.bird-mid-right {
+  transform-origin: 145px 45px;
+  animation: wingFlap 1.3s 0.2s infinite;
+}
+.bird-bot-left {
+  transform-origin: 75px 68px;
+  animation: wingFlap 1.4s 0.4s infinite;
+}
+.bird-bot-right {
+  transform-origin: 165px 68px;
+  animation: wingFlap 1.4s 0.4s infinite;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  left: 10%;
+  top: 8%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #fffde4 60%, #ffe29f 100%);
+  box-shadow: 0 0 120px 50px #ffe29f88;
+  animation: sunMove 10s ease-in-out infinite alternate;
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  border-radius: 60px;
+  filter: blur(1px);
+}
+.cloud1 {
+  left: 60%;
+  top: 15%;
+  width: 120px;
+  height: 50px;
+  background: rgba(255,255,255,0.85);
+  animation: cloud1 22s linear infinite;
+}
+.cloud2 {
+  left: 30%;
+  top: 22%;
+  width: 90px;
+  height: 38px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 40px;
+  animation: cloud2 30s linear infinite;
+}
+
+/* Hills */
+.hill {
+  position: absolute;
+  z-index: 1;
+}
+.hill1 {
+  left: -10%;
+  bottom: -8%;
+  width: 60vw;
+  height: 30vh;
+  background: var(--color-hill1);
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+}
+.hill2 {
+  left: 40%;
+  bottom: -10%;
+  width: 70vw;
+  height: 32vh;
+  background: var(--color-hill2);
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+}
+
+/* Trees */
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 120px;
+  z-index: 2;
+}
+.tree-trunk {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 8px;
+  height: 50px;
+  background: var(--color-trunk);
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+.tree-foliage {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px #5fa14733;
+}
+.tree-foliage-main {
+  bottom: 40px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-foliage-main);
+  animation: treeSway0 3.5s 0s infinite alternate;
+}
+.tree-foliage-mid {
+  bottom: 60px;
+  width: 36px;
+  height: 36px;
+  background: var(--color-foliage-mid);
+  opacity: 0.85;
+  animation: treeSway0 3.5s 0.2s infinite alternate;
+}
+.tree-foliage-top {
+  bottom: 75px;
+  width: 24px;
+  height: 24px;
+  background: var(--color-foliage-top);
+  opacity: 0.7;
+  animation: treeSway0 3.5s 0.4s infinite alternate;
+}
+/* Override animation delays for each tree */
+.tree1 .tree-foliage-main,
+.tree1 .tree-foliage-mid,
+.tree1 .tree-foliage-top { animation-name: treeSway1; }
+.tree1 .tree-foliage-main { animation-delay: 0.5s; }
+.tree1 .tree-foliage-mid { animation-delay: 0.7s; }
+.tree1 .tree-foliage-top { animation-delay: 0.9s; }
+.tree2 .tree-foliage-main,
+.tree2 .tree-foliage-mid,
+.tree2 .tree-foliage-top { animation-name: treeSway2; }
+.tree2 .tree-foliage-main { animation-delay: 1s; }
+.tree2 .tree-foliage-mid { animation-delay: 1.2s; }
+.tree2 .tree-foliage-top { animation-delay: 1.4s; }
+.tree3 .tree-foliage-main,
+.tree3 .tree-foliage-mid,
+.tree3 .tree-foliage-top { animation-name: treeSway3; }
+.tree3 .tree-foliage-main { animation-delay: 1.5s; }
+.tree3 .tree-foliage-mid { animation-delay: 1.7s; }
+.tree3 .tree-foliage-top { animation-delay: 1.9s; }
+
+/* Content */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.landing-avatar {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Circular gradient border using double border technique */
+  padding: 5px;
+  background: conic-gradient(from 0deg, #ffb7f9, #8065bc, #80d9fcf8 100%);
+  box-shadow: 0 4px 32px #8cd8e433, 0 1.5px 0 #fff8 inset;
+  margin-bottom: 12px;
+  border: none;
+}
+.landing-title {
+  margin: 0;
+  margin-top: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #082919;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #fff8, 0 4px 24px #b5e48c55;
+  background: linear-gradient(90deg, #163e24 60%, #0e271b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
+}
+.landing-desc {
+  max-width: 80%;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1.22rem;
+  color: #1a3c2b;
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 22px;
+  padding: 22px 36px;
+  box-shadow: 0 4px 32px #b5e48c22, 0 1.5px 0 #fff8 inset;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(3px);
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
+  font-family: 'Quicksand', 'Segoe UI', 'Montserrat', 'Merriweather', 'Georgia', serif;
+  font-weight: 500;
+  font-style: normal;
+  background-clip: padding-box;
+  /* Elegant gradient border */
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(120deg, #e0ffd646 0%, #b7e9ff3b 100%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.258) 0%, rgba(255,255,255,0.32) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  /* Subtle shadow for depth */
+  box-shadow: 0 4px 32px #b5e48c22, 0 1.5px 0 #fff8 inset;
+  /* Soft text shadow for readability */
+  text-shadow: 0 2px 12px #e0ffd6cc, 0 1px 0 #fff;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+}
+
+.landing-desc:hover, .landing-desc:focus {
+  box-shadow: 0 8px 40px #b5e48c44, 0 2px 0 #fff8 inset;
+  background: rgba(255,255,255,0.44);
+}
+
+/* Animations */
+@keyframes sunMove {
+  0% { top: 8%; }
+  100% { top: 12%; }
+}
+@keyframes cloud1 {
+  0% { left: 60%; }
+  100% { left: 100%; }
+}
+@keyframes cloud2 {
+  0% { left: 30%; }
+  100% { left: 80%; }
+}
+@keyframes treeSway0 {
+  0% { transform: translateX(-50%) rotate(-2deg); }
+  100% { transform: translateX(-50%) rotate(3deg); }
+}
+@keyframes treeSway1 {
+  0% { transform: translateX(-50%) rotate(2deg); }
+  100% { transform: translateX(-50%) rotate(-3deg); }
+}
+@keyframes treeSway2 {
+  0% { transform: translateX(-50%) rotate(-1deg); }
+  100% { transform: translateX(-50%) rotate(2deg); }
+}
+@keyframes treeSway3 {
+  0% { transform: translateX(-50%) rotate(1deg); }
+  100% { transform: translateX(-50%) rotate(-2deg); }
+}
+@keyframes birdsFly {
+  0% { right: -15%; opacity: 1; }
+  90% { opacity: 1; }
+  100% { right: 110%; opacity: 0; }
+}
+@keyframes wingFlap {
+  0% { transform: scaleY(1) }
+  20% { transform: scaleY(0.7) }
+  40% { transform: scaleY(1.2) }
+  60% { transform: scaleY(0.7) }
+  100% { transform: scaleY(1) }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-32px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
