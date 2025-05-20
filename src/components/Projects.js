@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Health CRM",
     description: "A web-based CRM for healthcare providers. Manage patient information, appointments, and communications.",
-    image: "https://private-user-images.githubusercontent.com/69379991/444867287-3b5718f9-5470-48b0-979e-a6183113ba5c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDc3NjU2NjQsIm5iZiI6MTc0Nzc2NTM2NCwicGF0aCI6Ii82OTM3OTk5MS80NDQ4NjcyODctM2I1NzE4ZjktNTQ3MC00OGIwLTk3OWUtYTYxODMxMTNiYTVjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA1MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNTIwVDE4MjI0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUzOGQwODIyMjdkMWRlMjQ5OTNkYTdkMmU3ZWRmMWVjYmQ4ZGFjNTNlMDM4YTY1NmE5MjE3NjdkYzM2NTc4YmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.bbLvrCt20f4IwF3cObgWeyY632B1pR-F0FD14-yA6-s",
+    image: "https://media.istockphoto.com/id/1321691804/photo/professional-smiling-black-female-head-nurse-or-doctor-wearing-stethoscope-uses-medical.jpg?s=612x612&w=0&k=20&c=IU-FBpdfNFXexfee4e8UNdR-EY_z8hk9Mo3KRsdPduk=",
     link: "https://github.com/amithsourya/health-crm",
   },
   // {
