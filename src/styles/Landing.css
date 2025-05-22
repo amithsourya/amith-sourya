@@ -325,6 +325,9 @@
   .landing-desc.modern-desc {
     text-align: center;
   }
+  .landing-title.modern-title {
+    padding-left: 5%;
+  }
 }
 
 /* Animations */
