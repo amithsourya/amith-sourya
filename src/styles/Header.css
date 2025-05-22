@@ -93,12 +93,9 @@
   padding: 0;
   outline: none;
   transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(25,118,210,0.08);
 }
 .header-hamburger:hover,
 .header-hamburger:focus {
-  background: rgba(25,118,210,0.10);
-  box-shadow: 0 4px 16px 0 #1976d233;
   border-radius: 10px;
 }
 .header-hamburger span {

@@ -18,6 +18,18 @@ function Landing() {
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll to 40px and prevent user from scrolling above that
+  useEffect(() => {
+    window.scrollTo(0, 40);
+    const handleScroll = () => {
+      if (window.scrollY < 40) {
+        window.scrollTo(0, 40);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: false });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section
       id="landing"
@@ -50,7 +62,7 @@ function Landing() {
             Experienced in{' '}
             <span className="exp-keyword">Java</span>,{' '}
             <span className="exp-keyword">JavaScript</span>,{' '}
-            <span className="exp-keyword">Node.js</span>,{' '}
+            {/* <span className="exp-keyword">Node.js</span>,{' '} */}
             <span className="exp-keyword">React</span>, and{' '}
             <span className="exp-keyword">Fine tuning LLMs</span>.<br />
             I create robust, transformative solutions with a focus on clean code and user experience.<br />

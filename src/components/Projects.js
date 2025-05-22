@@ -2,14 +2,37 @@ import React from 'react';
 
 const projects = [
   {
-    title: "Fine Tuning LLMs",
-    description: "LLM with Supervised Fine-Tuning to generate Mysterious Responses",
+    title: "Mysterious LLM",
+    description: (
+      <>
+        A compact yet powerful Large Language Model (LLM) built on top of Microsoft’s Phi architecture.
+        I have trained it to generate mysterious responses to user queries.
+        This model of upto
+        <span className="project-highlight">2.7 Billion</span>
+        parameters was trained with Supervised Fine Tuning using
+        
+        <span className="project-highlight">Python</span>
+        ,
+        <span className="project-highlight">Pytorch</span>
+      </>
+    ),
     image: "https://the-decoder.com/wp-content/uploads/2023/11/Phi-2-MS-1200x684.jpg",
     link: "https://github.com/amithsourya/mysteriousLLM"
   },
   {
     title: "Health CRM",
-    description: "A web-based CRM for healthcare providers. Manage patient information, appointments, and communications.",
+    description: (
+      <>
+        A web-based Customer Relationship Management (CRM) system tailored for healthcare providers.
+        It helps manage patient information, appointments, and communications efficiently.
+        The modern UI was built using
+        <span className="project-highlight">HTML</span>,
+        <span className="project-highlight">CSS</span>,
+        <span className="project-highlight">JavaScript</span>and
+        <span className="project-highlight">React</span>
+        
+      </>
+    ),
     image: "https://media.istockphoto.com/id/1321691804/photo/professional-smiling-black-female-head-nurse-or-doctor-wearing-stethoscope-uses-medical.jpg?s=612x612&w=0&k=20&c=IU-FBpdfNFXexfee4e8UNdR-EY_z8hk9Mo3KRsdPduk=",
     link: "https://github.com/amithsourya/health-crm",
   },

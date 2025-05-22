@@ -326,7 +326,7 @@
     text-align: center;
   }
   .landing-title.modern-title {
-    padding-left: 5%;
+    padding-left: 6%;
   }
 }
 
@@ -366,4 +366,21 @@
   box-shadow: none;
   margin: 0 2px;
   transition: background 0.2s, color 0.2s;
+}
+
+.project-highlight {
+  background: linear-gradient(90deg, #e0ffd6 60%, #b7eaff 100%);
+  color: #184c29;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 1px 2px;
+  margin: 0 4px;
+  /* font-size: 1em; */
+  /* letter-spacing: 0.01em; */
+  /* box-shadow: 0 1px 6px #b7eaff22; */
+  /* border: 1px solid #b7eaff55; */
+  transition: background 0.18s, color 0.18s;
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+  display: inline;
+  white-space: nowrap;
 }
