@@ -20,10 +20,10 @@ function Landing() {
 
   // Scroll to 40px and prevent user from scrolling above that
   useEffect(() => {
-    window.scrollTo(0, 40);
+    window.scrollTo({ top: 40, behavior: 'instant' });
     const handleScroll = () => {
       if (window.scrollY < 40) {
-        window.scrollTo(0, 40);
+        window.scrollTo({ top: 40, behavior: 'instant' });
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: false });
