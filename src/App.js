@@ -22,6 +22,7 @@ function App() {
     <div style={{ fontFamily: 'sans-serif', background: '#fafafa' }}>
       <Helmet>
         <title>Amith Sourya Sadineni | Oracle Software Engineer | LLM | React | Portfolio</title>
+        <meta name="google-site-verification" content="cJhrL9qll7J7vvontiMyDeMo9_9QxC_24pHutb1izi8" />
         <meta name="description" content="Amith Sourya Sadineni - Oracle Software Engineer, LLM fine-tuning, React, Node.js, JavaScript. Portfolio, projects, contact, and experience." />
         <meta name="keywords" content="Amith Sourya, Amith Sourya Sadineni, Oracle, Software Engineer, React, Node.js, LLM, Portfolio, JavaScript, Fine Tuning, AI, CRM, Health CRM, Oracle Developer, Oracle Engineer" />
         <meta name="author" content="Amith Sourya Sadineni" />
