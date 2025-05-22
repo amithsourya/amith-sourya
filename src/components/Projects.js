@@ -31,44 +31,86 @@ function Projects() {
   return (
     <section id="projects" style={{
       padding: '4rem 0',
-      background: '#fff'
+      background: 'linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%)'
     }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Featured Projects</h2>
+      <h2 style={{
+        textAlign: 'center',
+        marginBottom: '2.5rem',
+        fontFamily: "'Montserrat', 'Segoe UI', 'Quicksand', sans-serif",
+        fontWeight: 700,
+        fontSize: '2.1rem',
+        letterSpacing: '0.02em',
+        color: '#184c29',
+        background: 'linear-gradient(90deg, #163e24 60%, #45839b 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text'
+      }}>Featured Projects</h2>
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: '2rem',
-        maxWidth: 900,
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '2.2rem',
+        maxWidth: 1000,
         margin: '0 auto'
       }}>
         {projects.map((proj, idx) => (
           <div key={idx} style={{
-            background: '#f9f9f9',
-            borderRadius: 12,
-            boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-            padding: 24,
+            background: 'rgba(255,255,255,0.85)',
+            borderRadius: 18,
+            boxShadow: '0 4px 24px #b7eaff33, 0 1.5px 0 #fff8 inset',
+            padding: 28,
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'flex-start',
+            transition: 'box-shadow 0.18s, transform 0.18s',
+            border: '1.5px solid #b7eaff44',
+            position: 'relative',
+            minHeight: 340,
+            cursor: 'pointer'
           }}>
             <img
               src={proj.image}
               alt={proj.title}
               style={{
                 width: '100%',
-                height: '50%',
-                objectFit: 'cover ',
-                borderRadius: 8,
-                marginBottom: 16
+                height: 160,
+                objectFit: 'cover',
+                borderRadius: 12,
+                marginBottom: 18,
+                boxShadow: '0 2px 12px #b7eaff22'
               }}
             />
-            <h3>{proj.title}</h3>
-            <p style={{ textAlign: 'center' }}>{proj.description}</p>
-            <a href={proj.link} target="_blank" rel="noopener noreferrer" style={{
-              marginTop: 12,
+            <h3 style={{
+              margin: '0 0 8px 0',
+              fontSize: '1.32rem',
+              fontWeight: 700,
               color: '#1976d2',
-              textDecoration: 'underline'
-            }}>View Project</a>
+              letterSpacing: '0.01em',
+              fontFamily: "'Montserrat', 'Segoe UI', 'Quicksand', sans-serif"
+            }}>{proj.title}</h3>
+            <p style={{
+              textAlign: 'left',
+              color: '#184c29',
+              fontSize: '1.05rem',
+              marginBottom: 18,
+              fontFamily: "'Quicksand', 'Segoe UI', 'Montserrat', sans-serif"
+            }}>{proj.description}</p>
+            <a href={proj.link} target="_blank" rel="noopener noreferrer" style={{
+              marginTop: 'auto',
+              color: '#fff',
+              background: 'linear-gradient(90deg, #52b788 0%, #80d9fc 100%)',
+              padding: '10px 28px',
+              borderRadius: '20px',
+              fontWeight: 600,
+              fontSize: '1.04rem',
+              textDecoration: 'none',
+              letterSpacing: '0.03em',
+              boxShadow: '0 2px 12px #b7eaff33',
+              transition: 'background 0.18s, box-shadow 0.18s, color 0.18s'
+            }}
+            onMouseOver={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #80d9fc 0%, #52b788 100%)'; }}
+            onMouseOut={e => { e.currentTarget.style.background = 'linear-gradient(90deg, #52b788 0%, #80d9fc 100%)'; }}
+            >View Project</a>
           </div>
         ))}
       </div>

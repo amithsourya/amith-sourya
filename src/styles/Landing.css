@@ -18,51 +18,15 @@
   background: var(--color-bg-gradient);
   overflow: hidden;
 }
-
-.landing-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Birds */
-.birds-group {
-  position: absolute;
-  top: 12%;
-  right: -15%;
-  width: 240px;
-  height: 60px;
-  z-index: 3;
-  animation: birdsFly 32s linear infinite;
-}
-.birds-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.bird {
-  transform-origin: center;
-}
-.bird-top {
-  transform-origin: 120px 28px;
-  animation: wingFlap 1.2s infinite;
-}
-.bird-mid-left {
-  transform-origin: 95px 45px;
-  animation: wingFlap 1.3s 0.2s infinite;
-}
-.bird-mid-right {
-  transform-origin: 145px 45px;
-  animation: wingFlap 1.3s 0.2s infinite;
-}
-.bird-bot-left {
-  transform-origin: 75px 68px;
-  animation: wingFlap 1.4s 0.4s infinite;
-}
-.bird-bot-right {
-  transform-origin: 165px 68px;
-  animation: wingFlap 1.4s 0.4s infinite;
+.landing-section.landing-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%);
+  overflow: hidden;
+  position: relative;
 }
 
 /* Sun */
@@ -102,107 +66,44 @@
   animation: cloud2 30s linear infinite;
 }
 
-/* Hills */
-.hill {
-  position: absolute;
-  z-index: 1;
-}
-.hill1 {
-  left: -10%;
-  bottom: -8%;
-  width: 60vw;
-  height: 30vh;
-  background: var(--color-hill1);
-  border-top-left-radius: 300px;
-  border-top-right-radius: 300px;
-}
-.hill2 {
-  left: 40%;
-  bottom: -10%;
-  width: 70vw;
-  height: 32vh;
-  background: var(--color-hill2);
-  border-top-left-radius: 400px;
-  border-top-right-radius: 400px;
+/* Remove hills and trees */
+.hill,
+.hill1,
+.hill2,
+.tree,
+.tree-trunk,
+.tree-foliage,
+.tree-foliage-main,
+.tree-foliage-mid,
+.tree-foliage-top,
+.tree1,
+.tree2,
+.tree3 {
+  display: none !important;
 }
 
-/* Trees */
-.tree {
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 120px;
+/* Side-by-side main row */
+.landing-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
   z-index: 2;
-}
-.tree-trunk {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 8px;
-  height: 50px;
-  background: var(--color-trunk);
-  border-radius: 4px;
-  transform: translateX(-50%);
-}
-.tree-foliage {
-  position: absolute;
-  left: 50%;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 12px #5fa14733;
-}
-.tree-foliage-main {
-  bottom: 40px;
-  width: 48px;
-  height: 48px;
-  background: var(--color-foliage-main);
-  animation: treeSway0 3.5s 0s infinite alternate;
-}
-.tree-foliage-mid {
-  bottom: 60px;
-  width: 36px;
-  height: 36px;
-  background: var(--color-foliage-mid);
-  opacity: 0.85;
-  animation: treeSway0 3.5s 0.2s infinite alternate;
-}
-.tree-foliage-top {
-  bottom: 75px;
-  width: 24px;
-  height: 24px;
-  background: var(--color-foliage-top);
-  opacity: 0.7;
-  animation: treeSway0 3.5s 0.4s infinite alternate;
-}
-/* Override animation delays for each tree */
-.tree1 .tree-foliage-main,
-.tree1 .tree-foliage-mid,
-.tree1 .tree-foliage-top { animation-name: treeSway1; }
-.tree1 .tree-foliage-main { animation-delay: 0.5s; }
-.tree1 .tree-foliage-mid { animation-delay: 0.7s; }
-.tree1 .tree-foliage-top { animation-delay: 0.9s; }
-.tree2 .tree-foliage-main,
-.tree2 .tree-foliage-mid,
-.tree2 .tree-foliage-top { animation-name: treeSway2; }
-.tree2 .tree-foliage-main { animation-delay: 1s; }
-.tree2 .tree-foliage-mid { animation-delay: 1.2s; }
-.tree2 .tree-foliage-top { animation-delay: 1.4s; }
-.tree3 .tree-foliage-main,
-.tree3 .tree-foliage-mid,
-.tree3 .tree-foliage-top { animation-name: treeSway3; }
-.tree3 .tree-foliage-main { animation-delay: 1.5s; }
-.tree3 .tree-foliage-mid { animation-delay: 1.7s; }
-.tree3 .tree-foliage-top { animation-delay: 1.9s; }
-
-/* Content */
-.landing-content {
   position: relative;
-  z-index: 2;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 48px 24px 32px 24px;
+  box-sizing: border-box;
+}
+
+.landing-avatar-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 0 0 260px;
 }
-
 
 .landing-avatar {
   width: 240px;
@@ -216,6 +117,37 @@
   margin-bottom: 12px;
   border: none;
 }
+.landing-avatar.modern-avatar {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #80d9fc 0%, #ffb7f9 100%);
+  box-shadow: 0 4px 32px #8cd8e433, 0 1.5px 0 #fff8 inset;
+  border: none;
+  margin-bottom: 0;
+  transition: transform 0.2s;
+}
+.landing-avatar.modern-avatar:hover {
+  transform: scale(1.04);
+}
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landing-content.modern-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 500px;
+  gap: 18px;
+}
+
 .landing-title {
   margin: 0;
   margin-top: 8px;
@@ -230,6 +162,30 @@
   background-clip: text;
   animation: fadeInDown 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
 }
+.landing-title.modern-title {
+  margin: 0 0 8px 0;
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #0e271b;
+  background: linear-gradient(90deg, #163e24 60%, #45839b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: left;
+  text-shadow: 0 2px 16px #b7eaff33;
+  font-family: 'Montserrat', 'Segoe UI', 'Quicksand', sans-serif;
+}
+
+.modern-tagline {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #163e24;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
 .landing-desc {
   max-width: 80%;
   text-align: center;
@@ -261,10 +217,114 @@
   text-shadow: 0 2px 12px #e0ffd6cc, 0 1px 0 #fff;
   transition: box-shadow 0.2s, background 0.2s, border 0.2s;
 }
+.landing-desc.modern-desc {
+  width: 100%;
+  text-align: left;
+  font-size: 1.08rem;
+  color: #1a3c2b;
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 32px #b5e48c22, 0 1.5px 0 #fff8 inset;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(2.5px);
+  font-family: 'Quicksand', 'Segoe UI', 'Montserrat', 'Merriweather', 'Georgia', serif;
+  font-weight: 500;
+  font-style: normal;
+  border: 1.5px solid #b7eaff44;
+  background-clip: padding-box;
+  text-shadow: 0 2px 12px #e0ffd6cc, 0 1px 0 #fff;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+}
+.landing-desc.modern-desc .desc-secondary {
+  display: block;
+  font-size: 0.98rem;
+  color: #406c4e;
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
 
-.landing-desc:hover, .landing-desc:focus {
-  box-shadow: 0 8px 40px #b5e48c44, 0 2px 0 #fff8 inset;
-  background: rgba(255,255,255,0.44);
+.modern-email.modern-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 36px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #52b788 0%, #80d9fc 100%);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px #80d9fc33;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+}
+.modern-email.modern-cta:hover,
+.modern-email.modern-cta:focus {
+  background: linear-gradient(90deg, #80d9fc 0%, #52b788 100%);
+  box-shadow: 0 8px 32px #52b78844;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.highlight {
+  color: #52b788;
+  font-weight: 700;
+  background: linear-gradient(90deg, #b5e48c 0%, #80d9fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typing-title {
+  display: flex;
+  align-items: center;
+}
+
+.typing-caret {
+  display: inline-block;
+  width: 1ch;
+  min-width: 1ch;
+  color: #52b788;
+  font-weight: 400;
+  border-right: 2px solid #52b788;
+  line-height: 1;
+  background: none;
+  animation: blinkCaret 0.7s steps(1) infinite;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.typing-caret.done {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes blinkCaret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .landing-main-row {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 8px 24px 8px;
+  }
+  .landing-avatar-col {
+    flex: none;
+  }
+  .landing-content.modern-content {
+    align-items: center;
+    max-width: 98vw;
+  }
+  .landing-title.modern-title,
+  .modern-tagline,
+  .landing-desc.modern-desc {
+    text-align: center;
+  }
 }
 
 /* Animations */
@@ -280,52 +340,27 @@
   0% { left: 30%; }
   100% { left: 80%; }
 }
-@keyframes treeSway0 {
-  0% { transform: translateX(-50%) rotate(-2deg); }
-  100% { transform: translateX(-50%) rotate(3deg); }
-}
-@keyframes treeSway1 {
-  0% { transform: translateX(-50%) rotate(2deg); }
-  100% { transform: translateX(-50%) rotate(-3deg); }
-}
-@keyframes treeSway2 {
-  0% { transform: translateX(-50%) rotate(-1deg); }
-  100% { transform: translateX(-50%) rotate(2deg); }
-}
-@keyframes treeSway3 {
-  0% { transform: translateX(-50%) rotate(1deg); }
-  100% { transform: translateX(-50%) rotate(-2deg); }
-}
-@keyframes birdsFly {
-  0% { right: -15%; opacity: 1; }
-  90% { opacity: 1; }
-  100% { right: 110%; opacity: 0; }
-}
-@keyframes wingFlap {
-  0% { transform: scaleY(1) }
-  20% { transform: scaleY(0.7) }
-  40% { transform: scaleY(1.2) }
-  60% { transform: scaleY(0.7) }
-  100% { transform: scaleY(1) }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-32px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+
+.modern-role {
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+  background: linear-gradient(90deg, #52b788 0%, #45839b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(32px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.exp-keyword {
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+  background: #e6f7ef;
+  color: #24605a;
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-size: 1.03em;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  margin: 0 2px;
+  transition: background 0.2s, color 0.2s;
 }

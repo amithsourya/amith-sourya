@@ -1,88 +1,70 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Landing.css';
-// Import the avatar image
 import avatar from '../photo.jpeg';
 
 function Landing() {
+  // Typing animation state
+  const fullTitle = "Amith Sourya Sadineni";
+  const [typedTitle, setTypedTitle] = useState('');
+
+  useEffect(() => {
+    setTypedTitle('');
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypedTitle(fullTitle.slice(0, i + 1));
+      i++;
+      if (i === fullTitle.length) clearInterval(interval);
+    }, 80);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="landing"
-      className="landing-section"
+      className="landing-section landing-modern"
     >
-      {/* Nature inspired background with animations */}
       <div className="landing-bg">
-        {/* Birds group (triangle formation, animated right to left, perspective, flapping wings) */}
-        <div className="birds-group">
-          {/* 5 birds in a bent triangle formation, with perspective */}
-          <svg width="240" height="90" className="birds-svg">
-            {/* Top bird (closest, largest) */}
-            <g>
-              <g className="bird bird-top">
-                <path d="M120,28 Q128,18 136,28" stroke="#444" strokeWidth="3" fill="none"/>
-              </g>
-            </g>
-            {/* Middle row (smaller, further, bent) */}
-            <g>
-              <g className="bird bird-mid-left">
-                <path d="M95,45 Q101,37 107,45" stroke="#444" strokeWidth="2.2" fill="none"/>
-              </g>
-              <g className="bird bird-mid-right">
-                <path d="M145,45 Q151,37 157,45" stroke="#444" strokeWidth="2.2" fill="none"/>
-              </g>
-            </g>
-            {/* Bottom row (smallest, furthest, more bent) */}
-            <g>
-              <g className="bird bird-bot-left">
-                <path d="M75,68 Q80,62 85,68" stroke="#444" strokeWidth="1.5" fill="none"/>
-              </g>
-              <g className="bird bird-bot-right">
-                <path d="M165,68 Q170,62 175,68" stroke="#444" strokeWidth="1.5" fill="none"/>
-              </g>
-            </g>
-          </svg>
-        </div>
-        {/* Sun (animated) */}
+        {/* Removed birds-group */}
         <div className="sun" />
-        {/* Clouds (animated) */}
         <div className="cloud cloud1" />
         <div className="cloud cloud2" />
-        {/* Hills */}
-        <div className="hill hill1" />
-        <div className="hill hill2" />
-        {/* Trees with animated foliage (no falling leaves) */}
-        {[18, 38, 58, 78].map((left, i) => (
-          <div key={i} className={`tree tree${i}`} style={{ left: `${left}%` }}>
-            {/* Trunk */}
-            <div className="tree-trunk" />
-            {/* Foliage with animated sway */}
-            <div className={`tree-foliage tree-foliage-main sway${i}`} />
-            <div className={`tree-foliage tree-foliage-mid sway${i}`} />
-            <div className={`tree-foliage tree-foliage-top sway${i}`} />
-          </div>
-        ))}
+        {/* Removed hills and trees */}
       </div>
-      <div className="landing-content">
-        <img
-          src={avatar}
-          alt="Avatar"
-          className="landing-avatar"
-        />
-        <h1 className="landing-title">
-          Amith Sourya Sadineni
-        </h1>
-        <p className="landing-desc">
-          Hi! I'm Amith, a passionate software developer with a knack for problem-solving and building efficient solutions. I love clean code, good coffee, and physics.<br />Submit the form in the Contact section to get in touch with me! Or simply send out an email to:{' '}
+      <div className="landing-main-row">
+        <div className="landing-avatar-col">
+          <img
+            src={avatar}
+            alt="Amith Sourya Sadineni"
+            className="landing-avatar modern-avatar"
+          />
+        </div>
+        <div className="landing-content modern-content">
+          <h1 className="landing-title modern-title typing-title">
+            {typedTitle}
+            <span className={`typing-caret${typedTitle.length === fullTitle.length ? ' done' : ''}`}>|</span>
+          </h1>
+          <div className="modern-tagline">
+            <span className="highlight modern-role">Software Engineer</span> &mdash; Building impactful, cutting-edge digital products.
+          </div>
+          <p className="landing-desc modern-desc">
+            Experienced in{' '}
+            <span className="exp-keyword">Java</span>,{' '}
+            <span className="exp-keyword">JavaScript</span>,{' '}
+            <span className="exp-keyword">Node.js</span>,{' '}
+            <span className="exp-keyword">React</span>, and{' '}
+            <span className="exp-keyword">Fine tuning LLMs</span>.<br />
+            I create robust, transformative solutions with a focus on clean code and user experience.<br />
+            <span className="desc-secondary">
+              Open to new opportunities & collaborations.
+            </span>
+          </p>
           <a
             href="mailto:amith.sourya.sadineni@gmail.com"
-            style={{
-              color: 'inherit',
-              textDecoration: 'none',
-              cursor: 'pointer'
-            }}
+            className="modern-email modern-cta"
           >
-            amith.sourya.sadineni@gmail.com
+            Contact Me
           </a>
-        </p>
+        </div>
       </div>
     </section>
   );
