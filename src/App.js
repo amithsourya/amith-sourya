@@ -54,8 +54,8 @@ function App() {
           `}
         </script>
       </Helmet>
-      <Header onNavClick={handleNavClick} />
-      <div style={{ height: 70 }} /> {/* Spacer for fixed header */}
+      <Header onNavClick={handleNavClick}/>
+      <div style={{ height: 15 }} /> 
       <Landing />
       <Projects />
       <Contact />

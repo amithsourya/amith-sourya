@@ -19,16 +19,19 @@ function Landing() {
   }, []);
 
   // Scroll to 40px and prevent user from scrolling above that
-  useEffect(() => {
-    window.scrollTo({ top: 40, behavior: 'instant' });
-    const handleScroll = () => {
-      if (window.scrollY < 40) {
-        window.scrollTo({ top: 40, behavior: 'instant' });
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: false });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 40, behavior: 'instant' });
+  //   const handleScroll = (event) => {
+  //     if (window.scrollY < 40) {
+  //       event.preventDefault();
+  //       // console.log(event)
+  //       window.scrollTo({ top: 40, behavior: 'smooth' });
+  //       // if (event) event.preventDefault();
+  //     }
+  //   };
+  //   window.addEventListener('scroll', handleScroll, { passive: false });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <section
@@ -56,7 +59,7 @@ function Landing() {
             <span className={`typing-caret${typedTitle.length === fullTitle.length ? ' done' : ''}`}>|</span>
           </h1>
           <div className="modern-tagline">
-            <span className="highlight modern-role">Software Engineer</span> &mdash; Building impactful, cutting-edge digital products.
+            <span className="highlight modern-role">Software Engineer at Oracle</span> &mdash; Building impactful, cutting-edge digital products.
           </div>
           <p className="landing-desc modern-desc">
             Experienced in{' '}
