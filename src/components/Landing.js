@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Landing.css';
 // import avatar from '../photo.jpeg';
-import avatar from '../avatar.png';
+import avatar from '../avatar.jpg';
 
 function Landing() {
   // Typing animation state
