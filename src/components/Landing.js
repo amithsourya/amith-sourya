@@ -67,7 +67,7 @@ function Landing() {
             <span className="exp-keyword">JavaScript</span>,{' '}
             {/* <span className="exp-keyword">Node.js</span>,{' '} */}
             <span className="exp-keyword">React</span>, and{' '}
-            <span className="exp-keyword">Fine tuning LLMs</span>.<br />
+            <span className="exp-keyword">fine-tuning LLMs</span>.<br />
             I create robust, transformative solutions with a focus on clean code and user experience.<br />
             <span className="desc-secondary">
               Open to new opportunities & collaborations.
