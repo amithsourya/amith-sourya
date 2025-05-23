@@ -106,7 +106,7 @@
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  background: linear-gradient(135deg, #a3e4fa 0%, #ffb7f9 100%);
+  background: linear-gradient(135deg, #ffcd36 15%, #3bc4a9 50%);
   box-shadow: 0 4px 32px #8cd8e433, 0 1.5px 0 #fff8 inset;
   border: none;
   margin-bottom: 0;
