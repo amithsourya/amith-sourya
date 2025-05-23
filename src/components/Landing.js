@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Landing.css';
-import avatar from '../photo.jpeg';
+// import avatar from '../photo.jpeg';
+import avatar from '../avatar.png';
 
 function Landing() {
   // Typing animation state
@@ -14,7 +15,7 @@ function Landing() {
       setTypedTitle(fullTitle.slice(0, i + 1));
       i++;
       if (i === fullTitle.length) clearInterval(interval);
-    }, 80);
+    }, 120);
     return () => clearInterval(interval);
   }, []);
 
