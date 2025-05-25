@@ -2,12 +2,46 @@ import React from 'react';
 
 const projects = [
   {
+    title: "Script Generator using AI",
+    description: (
+      <>
+        An AI to generate domain-specific scripts for Oracle Utilities.
+        I have trained the Large Language Model (LLM) to generate scripts using simple English prompts.
+        This LLM, derived from the Meta LLaMA architecture of upto
+        <span className="project-highlight">1 Billion</span> parameters
+        , was trained with Supervised Fine Tuning using
+        <span className="project-highlight">Python</span>and
+        <span className="project-highlight">Pytorch</span>
+        
+      </>
+    ),
+    image: "https://www.aiwire.net/wp-content/uploads/2024/06/6-4-24-1713710970597-550x320.png",
+    link: "https://github.com/amithsourya/Script-Generate-4GL",
+  },
+  {
+    title: "Health CRM",
+    description: (
+      <>
+        A Website for Customer Relationship Management (CRM) system tailored for healthcare providers.
+        It helps manage patient information, appointments, and communications efficiently.
+        It is developed using
+        <span className="project-highlight">HTML</span>,
+        <span className="project-highlight">CSS</span>,
+        <span className="project-highlight">JavaScript</span>and
+        <span className="project-highlight">React</span>
+        
+      </>
+    ),
+    image: "https://media.istockphoto.com/id/1321691804/photo/professional-smiling-black-female-head-nurse-or-doctor-wearing-stethoscope-uses-medical.jpg?s=612x612&w=0&k=20&c=IU-FBpdfNFXexfee4e8UNdR-EY_z8hk9Mo3KRsdPduk=",
+    link: "https://github.com/amithsourya/health-crm",
+  },
+  {
     title: "Mysterious LLM",
     description: (
       <>
-        A compact yet powerful Large Language Model (LLM) built on top of Microsoft’s Phi architecture.
+        A compact yet powerful AI built on top of Microsoft’s Phi architecture.
         I have trained it to generate mysterious responses to user queries.
-        This model of upto
+        This Large Language Model (LLM) of upto
         <span className="project-highlight">2.7 Billion</span>
         parameters was trained with Supervised Fine Tuning using
         
@@ -20,34 +54,20 @@ const projects = [
     link: "https://github.com/amithsourya/mysteriousLLM"
   },
   {
-    title: "Health CRM",
+    title: "Meme Generator",
     description: (
       <>
-        A web-based Customer Relationship Management (CRM) system tailored for healthcare providers.
-        It helps manage patient information, appointments, and communications efficiently.
-        The modern UI was built using
+        Create hilarious, share-worthy memes in seconds with this easy-to-use web-based meme generator.
+        It is developed using
         <span className="project-highlight">HTML</span>,
         <span className="project-highlight">CSS</span>,
         <span className="project-highlight">JavaScript</span>and
         <span className="project-highlight">React</span>
-        
       </>
     ),
-    image: "https://media.istockphoto.com/id/1321691804/photo/professional-smiling-black-female-head-nurse-or-doctor-wearing-stethoscope-uses-medical.jpg?s=612x612&w=0&k=20&c=IU-FBpdfNFXexfee4e8UNdR-EY_z8hk9Mo3KRsdPduk=",
-    link: "https://github.com/amithsourya/health-crm",
-  },
-  // {
-  //   title: "Project Three",
-  //   description: "Yet another project.",
-  //   image: "https://via.placeholder.com/150",
-  //   link: "#"
-  // },
-  // {
-  //   title: "Project Four",
-  //   description: "A fourth project.",
-  //   image: "https://via.placeholder.com/150",
-  //   link: "#"
-  // }
+    image: "https://i.ytimg.com/vi/D-zhr3Ii8MU/maxresdefault.jpg",
+    link: "https://github.com/amithsourya/React-Practice/tree/main/meme-generator"
+  }
 ];
 
 function Projects() {
@@ -104,7 +124,7 @@ function Projects() {
               }}
             />
             <h3 style={{
-              margin: '0 0 8px 0',
+              margin: '0 0 0 0',
               fontSize: '1.32rem',
               fontWeight: 700,
               color: '#1976d2',
