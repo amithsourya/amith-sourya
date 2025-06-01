@@ -73,7 +73,7 @@ const projects = [
 function Projects() {
   return (
     <section id="projects" style={{
-      padding: '4rem 1.5rem',
+      padding: '4rem 2rem',
       background: 'linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%)'
     }}>
       <h2 style={{
@@ -137,7 +137,10 @@ function Projects() {
               color: '#184c29',
               fontSize: '1.05rem',
               marginBottom: 18,
-              fontFamily: "'Quicksand', 'Segoe UI', 'Montserrat', sans-serif"
+              fontFamily: "'Quicksand', 'Segoe UI', 'Montserrat', sans-serif",
+              wordBreak: 'break-word', // Ensures long words break
+              whiteSpace: 'normal',    // Allows wrapping
+              overflowWrap: 'break-word' // Fallback for older browsers
             }}>{proj.description}</p>
             <a href={proj.link} target="_blank" rel="noopener noreferrer" style={{
               marginTop: 'auto',
