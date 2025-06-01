@@ -32,7 +32,7 @@ function Contact() {
 
   return (
     <section id="contact" style={{
-      padding: '4.5rem 0',
+      padding: '4.5rem 2rem',
       background: 'linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%)'
     }}>
       <h2 style={{

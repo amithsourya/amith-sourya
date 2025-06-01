@@ -46,11 +46,6 @@ function Header({ onNavClick }) {
 
   return (
     <header className={`header${show ? ' header-show' : ' header-hide'}`}>
-      {/* Animated bubbles */}
-      <div className="header-bubble b1"></div>
-      <div className="header-bubble b2"></div>
-      <div className="header-bubble b3"></div>
-      <div className="header-bubble b4"></div>
 
       {/* Hamburger for mobile */}
       <button

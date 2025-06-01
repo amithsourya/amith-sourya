@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(34,34,34,0.97);
+  background: linear-gradient(120deg, #80ffd9 0%, #a7f4d0 40%, #b3f7ee 80%, #7cf3f3 100%);
   color: #fff;
   z-index: 1000;
   transition: top 0.4s;
@@ -11,33 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 18px 0 rgba(0,0,0,0.10);
   isolation: isolate;
+  border-bottom: 2px solid #efb6d954;
 }
 
 .header::after {
   content: none;
-}
-
-.header-bubble {
-  position: absolute;
-  bottom: 0;
-  border-radius: 50%;
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 1;
-  animation: headerBubbleFloat 8s linear infinite;
-  background: radial-gradient(circle at 60% 40%, #00fff7 60%, #1976d2 100%);
-}
-.header-bubble.b1 { left: 12%; width: 18px; height: 18px; animation-delay: 0s; }
-.header-bubble.b2 { left: 38%; width: 12px; height: 12px; animation-delay: 2s; }
-.header-bubble.b3 { left: 62%; width: 22px; height: 22px; animation-delay: 4s; }
-.header-bubble.b4 { left: 80%; width: 14px; height: 14px; animation-delay: 1s; }
-
-@keyframes headerBubbleFloat {
-  0% { transform: translateY(0) scale(1); opacity: 0.18; }
-  70% { opacity: 0.22; }
-  100% { transform: translateY(-60px) scale(1.18); opacity: 0; }
 }
 
 .header-hide { top: -80px; }
@@ -47,31 +26,31 @@
 .header-nav {
   display: flex;
   gap: 1.2rem;
-  align-items: center;
 }
 
 .header-link {
-  color: #fff;
+  color: rgb(17, 58, 49);
   padding: 7px 18px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s, color 0.2s, border 0.2s;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
 .header-link-social,
 .header-link-nav {
-  background: rgba(25,118,210,0.12);
+  background: rgba(252, 250, 209, 0.637); 
+  font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
 }
 
 .header-link-social:hover,
 .header-link-social:focus,
 .header-link-nav:hover,
 .header-link-nav:focus {
-  background: #0d3c6b;
-  color: #fff;
+  background: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* color: #0d3321; */
 }
 
 /* Hamburger menu styles */
@@ -103,7 +82,8 @@
   width: 28px;
   height: 4px;
   margin: 4px 0;
-  background: linear-gradient(90deg, #cfd4ea 0%, #cadade 100%);
+  /* background: linear-gradient(90deg, #cfd4ea 0%, #cadade 100%); */
+  background: #0b0b0b;
   border-radius: 2px;
   transition: 0.3s;
 }

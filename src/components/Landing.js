@@ -66,9 +66,10 @@ function Landing() {
             Experienced in{' '}
             <span className="exp-keyword">Java</span>,{' '}
             <span className="exp-keyword">JavaScript</span>,{' '}
+            <span className="exp-keyword">React</span>,{' '}
             {/* <span className="exp-keyword">Node.js</span>,{' '} */}
-            <span className="exp-keyword">React</span>, and{' '}
-            <span className="exp-keyword">fine-tuning LLMs</span>.<br />
+            <span className="exp-keyword">SQL</span>, and{' '}
+            <span className="exp-keyword">fine-tuning AI models</span>.<br />
             I create robust, transformative solutions with a focus on clean code and user experience.<br />
             <span className="desc-secondary">
               Open to new opportunities & collaborations.

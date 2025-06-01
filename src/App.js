@@ -21,12 +21,12 @@ function App() {
   return (
     <div style={{ fontFamily: 'sans-serif', background: '#fafafa' }}>
       <Helmet>
-        <title>Amith Sourya Sadineni | Oracle Software Engineer | LLM | React | Portfolio</title>
-        <meta name="description" content="Amith Sourya Sadineni - Oracle Software Engineer, LLM fine-tuning, React, Node.js, JavaScript. Portfolio, projects, contact, and experience." />
-        <meta name="keywords" content="Amith Sourya, Amith Sourya Sadineni, Oracle, Software Engineer, React, Node.js, LLM, Portfolio, JavaScript, Fine Tuning, AI, CRM, Health CRM, Oracle Developer, Oracle Engineer" />
+        <title>Amith Sourya Sadineni | Oracle Software Engineer | Artifical Intelligence | React | Portfolio</title>
+        <meta name="description" content="Amith Sourya Sadineni - Oracle Software Engineer, AI fine-tuning, React, Node.js, JavaScript. Portfolio, projects, contact, and experience." />
+        <meta name="keywords" content="Amith Sourya, Amith Sourya Sadineni, Oracle, Software Engineer, React, Node.js, AI, Portfolio, JavaScript, Fine Tuning, LLM, CRM, Health CRM, Oracle Developer, Oracle Engineer" />
         <meta name="author" content="Amith Sourya Sadineni" />
-        <meta property="og:title" content="Amith Sourya Sadineni | Oracle Software Engineer | LLM | React | Portfolio" />
-        <meta property="og:description" content="Amith Sourya Sadineni - Oracle Software Engineer, LLM fine-tuning, React, Node.js, JavaScript. Portfolio, projects, contact, and experience." />
+        <meta property="og:title" content="Amith Sourya Sadineni | Oracle Software Engineer | AI | React | Portfolio" />
+        <meta property="og:description" content="Amith Sourya Sadineni - Oracle Software Engineer, AI fine-tuning, React, Node.js, JavaScript. Portfolio, projects, contact, and experience." />
         <meta property="og:image" content="https://avatars.githubusercontent.com/u/69379991?v=4" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://amith-sourya.vercel.app/" />
@@ -49,7 +49,7 @@ function App() {
                 "@type": "Organization",
                 "name": "Oracle"
               },
-              "description": "Amith Sourya Sadineni is a Software Engineer at Oracle specializing in LLM fine-tuning, React, Node.js, and JavaScript."
+              "description": "Amith Sourya Sadineni is a Software Engineer at Oracle specializing in AI fine-tuning, React, Node.js, and JavaScript."
             }
           `}
         </script>

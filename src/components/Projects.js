@@ -73,7 +73,7 @@ const projects = [
 function Projects() {
   return (
     <section id="projects" style={{
-      padding: '4rem 0',
+      padding: '4rem 2rem',
       background: 'linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%)'
     }}>
       <h2 style={{
@@ -98,6 +98,7 @@ function Projects() {
       }}>
         {projects.map((proj, idx) => (
           <div key={idx} style={{
+            // margin: '10px 10px',
             background: 'rgba(255,255,255,0.85)',
             borderRadius: 18,
             boxShadow: '0 4px 24px #b7eaff33, 0 1.5px 0 #fff8 inset',
