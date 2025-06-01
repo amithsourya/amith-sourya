@@ -73,7 +73,7 @@ const projects = [
 function Projects() {
   return (
     <section id="projects" style={{
-      padding: '4rem 2rem',
+      padding: '4rem 1.5rem',
       background: 'linear-gradient(120deg, #e0ffd6 0%, #b7eaff 100%)'
     }}>
       <h2 style={{
