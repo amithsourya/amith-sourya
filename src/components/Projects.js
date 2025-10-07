@@ -24,11 +24,7 @@ const projects = [
       <>
         A Website tailored for healthcare providers.
         It helps manage patient information, appointments, and communications efficiently.
-        It is developed using
-        <span className="project-highlight">HTML</span>,
-        <span className="project-highlight">CSS</span>,
-        <span className="project-highlight">JavaScript</span>and
-        <span className="project-highlight">React</span>
+        
         
       </>
     ),
