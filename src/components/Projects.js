@@ -19,10 +19,10 @@ const projects = [
     link: "https://github.com/amithsourya/Script-Generate-4GL",
   },
   {
-    title: "Health CRM",
+    title: "Healthcare System",
     description: (
       <>
-        A Website for Customer Relationship Management (CRM) system tailored for healthcare providers.
+        A Website tailored for healthcare providers.
         It helps manage patient information, appointments, and communications efficiently.
         It is developed using
         <span className="project-highlight">HTML</span>,
@@ -40,8 +40,8 @@ const projects = [
     description: (
       <>
         A compact yet powerful AI built on top of Microsoft’s Phi architecture.
-        I have trained it to generate mysterious responses to user queries.
-        This Large Language Model (LLM) of upto
+        It was trained to generate mysterious responses to user queries.
+        This Large Language Model of upto
         <span className="project-highlight">2.7 Billion</span>
         parameters was trained with Supervised Fine Tuning using
         
